@@ -60,12 +60,12 @@ main {
   height: 50px;
 }
 
-.container{
+.container {
   display: flex;
   margin: auto;
   padding: auto;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 /*Loader*/
@@ -107,7 +107,7 @@ main {
 /*NAV BAR*/
 .nav {
   background-color: var(--background-color);
-  position: fixed;
+  position: relative;
   width: 100%;
   display: flex;
   border-bottom: 1px solid var(--primary-color);
@@ -167,7 +167,7 @@ main {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 55px;
+    height: 65px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     display: flex;
     overflow-x: hidden;
@@ -231,27 +231,19 @@ main {
 /*Principal Text*/
 .principal {
   display: flex;
+  height: 75%;
+  width: 75%;
   flex-direction: row;
   margin: auto;
 }
 .principal-content {
-  /*
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 25px;
-  grid-row-gap: 0px;*/
+  margin: auto;
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 8%;
-  margin-bottom: 2%;
-  width: 150px;
+  width: 100%;
   height: auto;
 }
 .principal_img {
-  margin: auto;
   -webkit-filter: brightness(110%);
   filter: brightness(110%);
 }
@@ -259,7 +251,8 @@ main {
 h3 {
   color: var(--second-color);
   font-size: 60px;
-  padding: auto;
+  margin: 0%;
+  padding: 0%;
 }
 
 .principal span {
@@ -307,28 +300,38 @@ h3 {
   .principal {
     display: flex;
     justify-content: center;
-    margin: auto;
-    align-items: center;
-    position: relative;
-    padding: auto;
-    font-size: larger;
+    height: auto;
+    width: 100%;    
+    border: 1px solid white;    
   }
-  .principal h1 {
-    color: var(--second-color);
+  .principal-content {
     margin: auto;
-    padding: auto;
-    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;    
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .principal h1,
+  h3 {
+    color: var(--second-color);
+    font-size: 40px;        
   }
   .principal span {
     color: var(--primary-color);
-    font-size: 40px;
+    font-size: 40px;        
   }
+  
+.principal p {
+  color: var(--second-color);
+  font-size: 20px;  
+}
+  
   .principal_img {
-    display: none;
-  }
-  .principal h1 {
-    font-size: 40px;
-    color: var(--second-color);
+    display: none;    
   }
   .principal span {
     color: var(--primary-color);
@@ -392,9 +395,9 @@ h3 {
 }
 @media (max-width: 1023px) and (min-width: 320px) {
   #about {
-    display: flex;    
+    display: flex;
   }
-  .about-title {    
+  .about-title {
     padding: auto;
     margin-left: auto;
     margin-right: auto;
