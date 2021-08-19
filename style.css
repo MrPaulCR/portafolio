@@ -50,7 +50,7 @@ body::-webkit-scrollbar-track-piece {
 main {
   width: 100vw;
   height: 100vh;
-  position: relative;  
+  position: relative;
 }
 
 .title-center {
@@ -62,10 +62,39 @@ main {
 
 .container {
   display: flex;
-  margin: auto;
-  padding: auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   height: auto;
+}
+@media screen and (max-width: 320px) {
+  .container {    
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 424px) {
+  .container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  .container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+  }
 }
 
 /*Loader*/
@@ -297,69 +326,126 @@ h3 {
   outline: none;
   text-decoration: none;
 }
-@media (max-width: 1023px) and (min-width: 320px) {
+@media screen and (max-width: 320px) {
   main {
-    width: 100vw;
+    width: 100%;
     height: auto;
-    position: relative;  
+    position: relative;
   }
   .principal {
     display: flex;
-    justify-content: center;
-    height: auto;
-    width: 100%;    
-  }
-  .principal-content {
-    margin: auto;
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    width: 100%;
-    height: auto;
     margin-left: auto;
     margin-right: auto;
   }
+  .principal-content {
+    margin-top: 30%;
+    margin-bottom: 30%;
+  }
   .principal h1,
   h3 {
-    color: var(--second-color);
-    font-size: 30px;
-    border-radius: 130px;
-    padding: 50px;
     text-align: center;
-    width: 100%;
+    font-size: 40px;
   }
   .principal span {
-    color: var(--primary-color);
     font-size: 40px;
-    margin-left: 10px;
   }
 
   .principal p {
-    color: var(--second-color);
-    font-size: 20px;    
-    padding: 50px;    
-    border-radius: 130px;
     text-align: center;
+    font-size: 20px;
   }
 
   .principal_img {
     display: none;
   }
-  .principal span {
-    color: var(--primary-color);
+      
+  .btn-link {
+    display: flex;
+    margin: auto;
+    justify-content: center;
   }
+}
+
+@media (min-width: 321px) and (max-width: 424px) {
+  main {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .principal {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .principal-content {
+    margin-top: 30%;
+    margin-bottom: 30%;
+  }
+  .principal h1,
+  h3 {
+    text-align: center;
+    font-size: 40px;
+  }
+  .principal span {
+    font-size: 40px;
+  }
+
+  .principal p {
+    text-align: center;
+    font-size: 20px;
+  }
+
   .principal_img {
     display: none;
   }
-  .principal_img img {
+      
+  .btn-link {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  main {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .principal {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .principal-content {
+    margin-top: 30%;
+    margin-bottom: 30%;
+  }
+  .principal h1,
+  h3 {
+    text-align: center;
+    font-size: 40px;
+  }
+  .principal span {
+    font-size: 40px;
+  }
+
+  .principal p {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .principal_img {
     display: none;
   }
+      
   .btn-link {
-    outline: none;
     display: flex;
-    justify-content: center;
     margin: auto;
-    text-decoration: none;
+    justify-content: center;
   }
 }
 /*About*/
@@ -436,14 +522,14 @@ h3 {
   }
 
   .about-description {
-    width: 100%; 
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     margin: auto;
   }
 
-  #aboutme {    
+  #aboutme {
     width: 100%;
   }
   #videopauldev {
@@ -586,8 +672,6 @@ h3 {
   width: 350px;
   background: rgba(28, 28, 28, 0.6);
   box-shadow: 0 1px 25px 0 var(--third-color);
-  backdrop-filter: blur(3.5px);
-  -webkit-backdrop-filter: blur(3.5px);
   border-radius: 10px;
   border: 1px solid var(--background-color);
 }
