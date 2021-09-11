@@ -7,48 +7,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="/pauldevicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Paul Dev Home</title>
 </head>
 
 <body>
+    <div id="particles-js"></div>
     <!--Navbar-->
-    <nav class="navbar animate__animated animate__fadeInDown">
-        <div class="brand-title"><a href="/"><video src="/Paul Dev video.mp4" autoplay muted
-                    loop></video></a>
+    <nav class="nav animate__animated">
+        <div class="brand-title">
+            <a href="/"><video src="/Paul Dev video.mp4" autoplay loop muted></video></a>
         </div>
-        <!--<a href="/" class="brand-title">Paul Dev</a>-->
-        <div class="navbar-links">
-            <ul>
-                <li><a href="/" class="home">Inicio</a></li>
-                <li><a href="#about" class="about">Acerca de</a></li>
-                <li><a href="#skills" class="skills">Habilidades</a></li>
-                <li><a href="#" class="jobs">Trabajos</a></li>
-                <li><a href="#contact-form" class="contact">Contacto</a></li>
-            </ul>
-        </div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <a href="/" class="nav-links nav-links-active">
+            <i class="material-icons nav-icon">home</i>
+            <span class="nav-text">Inicio</span>
+        </a>
+        <a href="#about" class="nav-links">
+            <i class="material-icons nav-icon">info</i>
+            <span class="nav-text">Acerca de</span>
+        </a>
+        <a href="#skills" class="nav-links">
+            <i class="material-icons nav-icon">account_circle</i>
+            <span class="nav-text">Habilidades</span>
+        </a>
+        <a href="#" class="nav-links">
+            <i class="material-icons nav-icon">work</i>
+            <span class="nav-text">Trabajos</span>
+        </a>
+        <a href="#contact-form" class="nav-links"><i class="material-icons nav-icon">contact_mail</i>
+            <span class="nav-text">Contacto</span>
         </a>
     </nav>
     <!--Main-->
     <main>
-        <div id="particles-js"></div>
         <div class="container">
             <div class="principal animate__animated animate__fadeInLeft">
-                <h1>Hola,<br>Soy <Span>Paul Cando</Span><br>Programador Full-Stack<br><a href="#contact-form"
-                        class="btn-link"><button class="button-primary">
-                            Contactame
-                        </button></a></h1>
-                </button>
+                <div class="principal-content">
+                    <h1>Hola , soy <br><span>Paul Cando</span></h1>
+                    <h3>Full Stack Developer</h3>
+                    <p>Programador con conocimientos en sistemas multiplataformas
+                        y a medida, dale un impulso a tu
+                        negocio ahora mismo.</p>
+                    <a href="#contact-form" class="btn-link"><button class="button-primary">Contactame</button></a>
+                </div>
+                <div class="principal_img">
+                    <img src="/perfil1.png" alt="" class="animate__animated animate__fadeInRight">
+                </div>
             </div>
-            <img src="/perfil1.png" alt="" class="principal_img animate__animated animate__fadeInRight">
         </div>
         <div id="contenedor_carga">
             <div id="carga"></div>
         </div>
-
     </main>
     <!--About-->
     <section id="about">
@@ -56,11 +65,13 @@
             <img src="/about.png" alt="" class="about-img">
             <div class="about-description">
                 <h1 class="about-title">Acerca De</h1>
-                <video src="/Paul Dev video con letras.mp4" autoplay muted id="videopauldev"></video>
+                <video src="/Paul Dev video con letras.mp4" autoplay loop muted id="videopauldev"></video>
                 <!--<h1>Soy Paul Cando</h1>-->
                 <p id="aboutme">Estudiante de la carrera de Ingenieria en Sistemas con conocimientos en el ambito
                     informatico , especializado en brindar soluciones de software a medida y asi potenciar la
                     productividad de su negocio o empresa de manera eficaz y eficiente.</p>
+                <a href="https://drive.google.com/u/3/uc?id=1N1jKMiD0IH5LEo6zMPrX7mvla1WyKULy&export=download"
+                    class="btn-link center-element"><button class="button-primary">Descargar Cv</button></a>
             </div>
         </div>
     </section>
@@ -74,7 +85,7 @@
             <div class="skills-section2">
                 <h1 class="title-center">Habilidades Front-End</h1>
             </div>
-            <div class="skills-section3">
+            <div class="skills-section3">                
                 <div class="square-skill">
                     <img src="/nodejs.svg" alt="logo-nodejs" srcset="">
                     <h4 class="title-center">Node Js</h4>
@@ -211,22 +222,24 @@
             </form>
         </div>
     </section>
-
-    <div class="footer">
+    <footer>
         <h1>Paul Dev</h1>
         <h3>Enlace a Redes Sociales</h3>
         <div>
-            <a href=""><img src="/facebook.svg" alt="logofacebook"></a>
-            <a href=""><img src="/github.svg" alt="logogithub" srcset=""></a>
-            <a href=""><img src="/youtube.svg" alt="logoyoutube" srcset=""></a>
+            <a href="#"><img src="/facebook.svg" alt="logofacebook"></a>
+            <a href="#"><img src="/github.svg" alt="logogithub" srcset=""></a>
+            <a href="#"><img src="/youtube.svg" alt="logoyoutube" srcset=""></a>
         </div>
-    </div>
+    </footer>
+    <!--Arriba pegar-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="/nav.js"></script>
+
     <script src="/particles.js"></script>
     <script src="/app.js"></script>
-    <script src="/lib/stats.js"></script>
+    <script src="/stats.js"></script>
+    <script src="/__/firebase/8.8.1/firebase-app.js"></script>
+    <script src="/__/firebase/init.js"></script>    
 </body>
 
 </html>

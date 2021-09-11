@@ -10,7 +10,11 @@ particlesJS.load('particles-js', 'particles.json', function() {
 */
 
 /* Otherwise just put the config content (json): */
-
+window.onload = function(){
+  const contenedor = document.getElementById('contenedor_carga');
+  contenedor.style.visibility = 'hidden';
+  contenedor.style.opacity = '0';
+}
 particlesJS('particles-js',
   
   {

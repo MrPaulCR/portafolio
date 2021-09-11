@@ -173,7 +173,7 @@ main {
 .brand-title {
   margin: auto;
   width: 35%;
-  height: auto;
+  height: auto;  
 }
 .brand-title a {
   color: #fff;
@@ -764,7 +764,21 @@ canvas {
   display: block;
   vertical-align: bottom;
 }
-
+@media screen and (min-weight:1023px) {
+  #particles-js {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    background-image: url("");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat fixed;
+    position: fixed;
+  }
+  canvas {
+    display: block;
+    vertical-align: bottom;
+  }
 /* ---- stats.js ---- */
 
 .count-particles {
@@ -828,6 +842,7 @@ footer h1 {
 }
 footer h3 {
   font-size: 1.5em;
+}
 }
 
 @media (max-width: 1023px) and (min-width: 320px) {
